@@ -1,11 +1,14 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
    font-family: 'Poppins', sans-serif;
 }
 body {
     background-color: #f2f2f2;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0;
+    padding: 0;
 }
 nav {
     display: flex;
@@ -827,5 +830,204 @@ footer {
   .footer-links ul li a:hover {
     color: #a7a7a7;
   }
+/*/* Responsive Styles */
 
-  
+/* Small screens (max-width: 768px) */
+@media (max-width: 768px) {
+
+    /* Nav Section */
+    .nav-links {
+        width: 50%;
+    }
+    .nav-links a {
+        font-size: 12px;
+    }
+    .auth-buttons .login,
+    .auth-buttons .signup {
+        font-size: 11px;
+        padding: 6px 15px;
+    }
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 45px;
+        word-wrap: break-word; /* Allow wrapping */
+    }
+    .hero-content p {
+        font-size: 12px;
+    }
+    .cta-buttons .get-started,
+    .cta-buttons .learn-more {
+        font-size: 11px;
+        padding: 8px 20px;
+    }
+
+    /* Agriculture Section */
+    .agriculture-section {
+        flex-direction: column;
+        padding: 20px;
+        margin: 20px;
+    }
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+        overflow: hidden; /* Prevent overflow */
+    }
+    .image-content {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Services Section */
+    .services-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .service-box {
+        flex-basis: 100%;
+        padding: 30px;
+        max-width: 100%; /* Ensure it stays within the container */
+    }
+
+    /* Products Section */
+    .products-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .product-box {
+        flex-basis: 100%;
+        padding: 30px;
+        max-width: 100%; /* Ensure it stays within the container */
+    }
+
+    /* Sustainable Farming */
+    .sustainable-farming {
+        height: 60vh;
+    }
+    .sustainable-content h1 {
+        font-size: 35px;
+        word-wrap: break-word; /* Allow wrapping */
+    }
+    .hero-buttons a {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    /* Benefits Section */
+    .benefits-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        overflow: hidden; /* Prevent overflow */
+    }
+    .right-content {
+        padding: 20px;
+    }
+
+    /* Testimonials Section */
+    .testimonial-card {
+        flex-direction: column;
+        padding: 30px;
+        overflow: hidden; /* Prevent overflow */
+    }
+    .profile img {
+        width: 100px;
+        height: 100px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .arrow-left,
+    .arrow-right {
+        top: auto;
+        transform: translateX(0);
+    }
+
+    /* Blog Section */
+    .blog-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .blog-card {
+        max-width: 100%;
+        padding: 20px;
+        overflow: hidden; /* Prevent overflow */
+    }
+
+    /* Footer Section */
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        overflow: hidden; /* Prevent overflow */
+    }
+}
+
+/* Very Small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Nav Section */
+    .nav-links {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content p {
+        font-size: 11px;
+    }
+    .cta-buttons .get-started,
+    .cta-buttons .learn-more {
+        font-size: 10px;
+        padding: 6px 15px;
+    }
+
+    /* Agriculture Section */
+    .agriculture-section {
+        padding: 10px;
+    }
+
+    /* Services Section */
+    .service-box {
+        padding: 20px;
+    }
+
+    /* Products Section */
+    .product-box {
+        padding: 20px;
+    }
+
+    /* Sustainable Farming */
+    .sustainable-content h1 {
+        font-size: 28px;
+    }
+
+    /* Benefits Section */
+    .benefits-container {
+        gap: 15px;
+    }
+
+    /* Testimonials Section */
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    /* Blog Section */
+    .blog-cards {
+        gap: 15px;
+    }
+        /* Footer Section */
+        .footer-container {
+            flex-direction: column;
+            gap: 20px;
+    }
+}
+
+/* Adjustments for larger screens (above 1300px) */
+@media (min-width: 1300px) {
+    .services-container, .products-container {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
